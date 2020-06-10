@@ -1,0 +1,103 @@
+<div class="card content-wrapper layout border-info mb-3 ">
+   <div class="card-header text-white" type="button" style="background-color:#337ab7;height: 2.5rem;">
+     <strong>Detect Bias</strong> 
+   </div>
+   <div class="card-body scroll-bar">
+      <form>
+         <div class="row">
+            <div class="col-md-6"><strong>Project name: </strong></div><br>
+            <div class="col-md-6"><strong>Dataset : </strong></div>
+            <div class="col-md-6"><strong>Mitigation Algorithm: </strong></div><br>
+            <div class="col-md-6"><strong>Protected Attribute: </strong></div>
+            <div class="col-md-6"><strong>Privileged Attribute Value: </strong></div>
+            <div class="col-md-6"><strong>Unprivileged Attribute Value: </strong></div>
+
+         </div>
+         <br>
+         <div class="row">
+            <div class="col-md-12">
+               <strong>Select Protected Attributes</strong>
+               <p class="card-text" style="color:blue;font-size:14px;"><i>("An attribute which partitions the 
+                   population into groups")</i> </p>
+           </div>   
+                  <div class="col-md-4"><br>
+                     <ng-select [items]="Headerdata"
+                   bindLabel="name"
+                   bindValue="id"
+                   [multiple]="true"
+                   placeholder="Select user or add custom tag"
+                   (change)="updateattribute($event)"
+                   [(ngModel)]="selectedUserIds">
+        </ng-select>
+        
+            </div>
+            
+         </div>
+         
+         <div class="row"  >
+            <div class="col-md-3" ><br>
+               <strong>{{selectedUserIds}}</strong>
+            </div>
+            <div class="col-md-3"><br>
+               <ng-select [items]="ValueData"
+               bindLabel="name"
+               bindValue="id"
+               [addTag]="addCustomUser"
+               [multiple]="true"
+               placeholder="Select user or add custom tag"
+               [(ngModel)]="selectedUserIds">
+    </ng-select>
+    
+   </div>
+           <div class="col-md-3 "><br>
+            <ng-select [items]="cities2"
+            bindLabel="name"
+            bindValue="id"
+            [addTag]="addCustomUser"
+            [multiple]="true"
+            placeholder="Select user or add custom tag"
+            [(ngModel)]="selectedUserIds">
+ </ng-select>
+        </div> 
+         </div>
+         
+         <div class="row">
+           <div class="col-md-12">
+              <strong>Predicted Label(s)</strong>
+           </div>
+           
+           <div class="col-md-6"><br>
+              <ng-select [items]="cities2"
+              bindLabel="name"
+              bindValue="id"
+              [addTag]="addCustomUser"
+              [multiple]="true"
+              placeholder="Select user or add custom tag"
+              [(ngModel)]="selectedUserIds">
+   </ng-select>
+          </div>   
+                 
+        </div>
+        <div class="row">
+           <div class="col-md-12">
+              <strong>Truth Label(s)</strong>
+              
+          </div>   
+                 <div class="col-md-6"><br>
+                  <ng-select [items]="cities2"
+                  bindLabel="name"
+                  bindValue="id"
+                  [addTag]="addCustomUser"
+                  [multiple]="true"
+                  placeholder="Select user or add custom tag"
+                  [(ngModel)]="selectedUserIds">
+       </ng-select>      
+              
+           </div>
+        </div>
+         
+   
+   
+
+
+ 
