@@ -1,0 +1,17 @@
+body {
+	background-color: #ecf0f5 !important;
+}
+
+.layout {
+	min-height: 500px;
+	padding: 10px;
+}
+.scroll-bar {
+	height: 100px; 
+	overflow-y: auto;
+  }
+  .myButton {
+    
+    top: 0;
+    right: 0;
+}

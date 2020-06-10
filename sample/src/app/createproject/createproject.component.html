@@ -1,0 +1,112 @@
+<div class="card content-wrapper layout border-info mb-3 ">
+    <div class="card-header text-white" type="button" style="background-color:#337ab7;height: 2.5rem;">
+       <strong>New Project</strong>
+       
+    </div>
+    <div class="card-body">
+       <form>
+          <div class="row">
+             <div class="col-md-3"><strong>Project name</strong></div>
+             <div class="col-md-3"><strong>Department</strong></div>
+             <div class="col-md-6"><button class="btn btn-info" style="background-color:#337ab7;float: right;" (click)="OnActivity()"><b>Activities</b></button></div>
+          </div>
+          <div class="row">
+             <div class="col-md-3">
+                <input class="form-control" [(ngModel)]="Project" name="Project" type="text" placeholder="Project Name" required>
+             </div>
+             <div class="col-md-3">
+                <select class="form-control" [(ngModel)]="Department" name="Department" required>
+                <option>Human Resources</option>
+                <option>BUsiness Team</option>
+                </select>
+             </div>
+          </div>
+          <br>
+          <div class="row">
+             <div class="col-md-3 control-label"><strong>Model Category</strong></div>
+             <div class="col-md-1 form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="model" name="model" id="radio1" value="1"  checked>
+                <!-- (click)="getTeamRequest()"  -->
+                <label class="form-check-label" for="radio1">
+                New
+                </label>
+             </div>
+             <div class="col-md-1 form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="model" name="model" value="0" >
+                <!-- (click)="getNewTeamRequest()" -->
+                <label class="form-check-label" for="radio2">
+                Deployed
+                </label>
+             </div>
+          </div>
+          <br>
+          <div class="row">
+             <div class="col-md-3"><strong>Project Current Stage</strong></div>
+             <div class="col-md-3"><strong>Project Keywords</strong></div>
+          </div>
+          <div class="row">
+             <div class="col-md-3">
+                <input class="form-control" [(ngModel)]="CurrentStage" name="CurrentStage" type="text" placeholder="Project Current Stage">
+             </div>
+             <div class="col-md-3">
+                <input class="form-control" [(ngModel)]="Keywords" name="Keywords" type="text" placeholder="Project Keywords">
+             </div>
+          </div>
+          <br>
+          <div class="row">
+             <div class="col-md-3"><strong>Data Location</strong></div>
+          </div>
+          <div class="row">
+             <!-- <div class="col-md-3">
+                <input class="form-control" type="text" placeholder="Data File">
+             </div> -->
+             <div class="col-md-3 form-group"><br>
+                <input type="file" class="form-control-file" (change)="onSelectFile($event)" >
+             </div>
+          </div>
+          <br>
+          <div class="row">
+             <div class="col-md-3"><strong>Project Description</strong></div>
+          </div>
+          <div class="row">
+             <div class="col-md-3">
+                <textarea class="form-control" id="dataDesc" [(ngModel)]="description" name="description" rows="3" cols="50"></textarea>
+             </div>
+          </div>
+          <br>
+          <div class="row">
+             <div class="col-md-3"><strong>Project Contact</strong></div>
+             <div class="col-md-3"><strong>Contact E-mail</strong></div>
+          </div>
+          <div class="row">
+             <div class="col-md-3">
+                <input class="form-control" type="text" [(ngModel)]="contact" name="contact" placeholder="Project Contact" [ngModelOptions]="{standalone: true}">
+             </div>
+             <div class="col-md-3 form-group">
+                <input class="form-control" type="text" [(ngModel)]="contactEmail" name="contactEmail" placeholder="Contact E-mail">
+             </div>
+          </div>
+          <br>
+          <div class="row">
+             <div class="col-md-3"><strong>Legel Reviewer</strong></div>
+          </div>
+          <div class="row">
+             <div class="col-md-3">
+                <select [(ngModel)]="reviewer" class="form-control" name="reviewer">
+                <option>Raja</option>
+                <option>Guru</option>
+                </select>
+             </div>
+          </div>
+          <br>
+          <div class="col-lg-12 col-md-12 col-sm-12 input-group">
+             <button class="btn btn-primary" title="submit to create" style="background-color:#337ab7;" (click)="Onsubmit()">Submit</button>&nbsp;
+             <button class="btn btn-primary" style="background-color:#337ab7;">Delete</button>&nbsp;
+             <button class="btn btn-primary" style="background-color:#337ab7;">Cancel</button>
+          </div>
+       </form>
+    </div>
+    
+ </div>
+ 
+  
